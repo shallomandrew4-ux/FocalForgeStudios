@@ -1,32 +1,40 @@
 # FocalForge Studios — 3D Portfolio Website
 
-A responsive React + Vite portfolio with a Three.js-powered 3D hero, interactive photo wall, filterable gallery, services, studio story, and contact enquiry form.
+A responsive React + Vite portfolio for FocalForge Studios, Kampala, Uganda. It uses React Three Fiber / Three.js for floating 3D photo panels, Framer Motion for transitions, and a responsive editorial layout.
 
-## Included
-- Cinematic black / cyber-orange brand styling
-- 3D image-textured planes using supplied photography (not full photogrammetry meshes)
-- Responsive navigation and layout
-- Animated sections and hover interactions
-- Filterable gallery and project detail modal
-- Contact form that prepares an email in the visitor's default email application
-- FocalForge logo and uploaded visual assets
+## Features
+- Interactive 3D hero with floating image panels
+- Responsive navigation and mobile menu
+- Filterable portfolio gallery and project detail modals
+- Studio services, about section, and project enquiry form
+- Dark editorial styling with cyber-orange accents
+- Reduced-motion accessibility support
+- GitHub Pages deployment workflow
 
 ## Run locally
-1. Install Node.js 18+.
-2. Open a terminal in this folder.
-3. Run `npm install`
-4. Run `npm run dev`
-5. Open the local URL printed by Vite.
+Requires Node.js 18 or newer.
 
-## Build for deployment
-Run `npm run build`. The production site is written to `dist/`. Upload the contents of `dist/` to a static hosting provider such as Netlify, Vercel, Cloudflare Pages, or your web host.
+```bash
+npm install
+npm run dev
+```
 
-## Important before launch
-- The inquiry form uses `mailto:` and does not store submissions on a server. For a real production lead pipeline, connect a form backend or CRM.
-- Replace the placeholder social links with your actual profile URLs.
-- Review portfolio image permissions and captions before publishing.
-- The project contains your supplied assets in `public/assets/`.
-- The 3D hero displays supplied photos on floating planes. It is an interactive 3D presentation of the images, not a reconstruction of people as volumetric 3D models.
+## Production build
+```bash
+npm run build
+npm run preview
+```
 
-## Brand and business context
-The site presents FocalForge Studios as a Kampala-based creative + technology studio offering cinematography, photography, web systems, software engineering, and integrated visual/digital work.
+## Images
+The gallery currently uses remote sample photography from Unsplash so the site renders immediately. The original photographs supplied in the chat have **not yet been uploaded as binary assets** to this repository. To use those exact photos, add them to `public/assets/` and update the image URLs in `src/App.jsx` to local paths such as `/assets/portrait-01.jpg`.
+
+## Contact form
+The form opens the visitor's email app with a pre-filled message addressed to `billing@focalforgestudios.com`. It does not store submissions on a server. Connect a form backend or CRM before relying on it for production leads.
+
+## Deploy
+A GitHub Actions workflow is included for GitHub Pages. In the repository, open **Settings → Pages** and set the source to **GitHub Actions**. Pushes to `main` will then build and deploy the site.
+
+## Before launch
+- Replace the sample Unsplash images with portfolio images you have permission to publish.
+- Confirm the contact email and replace placeholder social links with official profiles.
+- Test the enquiry flow and connect a backend if you need reliable lead storage.
